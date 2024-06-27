@@ -1,0 +1,129 @@
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/styles.css ***!
+  \**********************************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-y: scroll;
+}
+#github-logo {
+    width: 60px;
+    padding:8px;
+    position: absolute;
+    right:0;
+}
+
+.front-image {
+    width: 400px;
+    border-radius: 16px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    justify-content: center;
+    padding:10px;
+}
+.tab {
+    width: 100px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px;
+    background-color: cornsilk;
+}
+
+#content {
+    border-top:3px solid gray;
+    padding-top: 30px;
+}
+
+/* Home */
+.home-page {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    gap:50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.home-page h1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.home-page p {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+/* Menu */
+.menu-container {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu-item{
+    width: min-content;
+    border-radius: 16px;
+    border: 1px solid gray;
+    padding:8px;
+    box-shadow: 2px 5px 5px 1px lightgray;
+}
+
+.menu-item img{
+    width: 200px;
+    border-radius: 16px;
+}
+
+.menu-item p {
+    padding:10px;
+}
+
+.menu-item p:first-of-type {
+    font-weight: bold;
+}
+
+.active {
+    box-shadow: 0 4px 0 0 lightgray;
+}
+
+/* About */
+.about-page {
+    max-width: 800px;
+    margin: auto;
+    padding:20px;
+}
+.about-page h1 {
+    color: crimson;
+    text-align: center;
+}
+
+.about-page p {
+    margin-top: 32px;
+    text-align: justify-all;
+    font-size: 1.5em;
+    line-height: 42px;
+}
+
+/*# sourceMappingURL=main.css.map*/
