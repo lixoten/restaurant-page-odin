@@ -20,11 +20,42 @@ project-folder/
 `npm init`
 `npm install webpack webpack-cli --save-dev`
 
+
 `npm install --save-dev html-webpack-plugin`
 `npm install --save-dev css-loader`
 `npm install --save-dev mini-css-extract-plugin`
 `npm install --save-dev file-loader`
+`npx webpack`
+Optional run if you want watch
+`npx webpack --watch`
 
+Optional Install if you want run server
+`npm install --save-dev webpack-dev-server`
+`npx webpack serve`
+or in webpack 
+note...... if you use "server" no need for "watch". "server" also watches
+```json
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --mode=development",
+    "watch": "webpack --progress --watch",
+    "server": "webpack-dev-server --open"
+  }
+}
+```
+
+```json
+{
+  "main": "src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --mode=development",
+    "watch": "webpack --progress --watch",
+    "server": "webpack-dev-server --open"
+  }
+}
+```
 * Things to do 
   * Make sure to remove
     * ---script tag
@@ -56,6 +87,16 @@ module.exports = {
   },
   // optional helps with debugging as in making line numnbers match  
   devtool: "source-map",
+  // devServer: {
+  //     // contentBase: path.join(__dirname, 'dist'), 
+  //     // use statics... newer version
+  //     static: {
+  //         directory: path.join(__dirname, 'dist'),
+  //     },
+  //
+  //     port: 3000,
+  //     open: true,
+  // },
   // module: {
   //   rules: [
   //     {
@@ -188,4 +229,15 @@ module.exports = {
   },
   // ...
 };
+```
+
+
+```javascript
+            // Tag-C CSS becomes pard of js bundle file, no need for css-loader.. alternate wat of doing it
+            // npm install --save-dev style-loader
+            // {
+            //     test: /\.css$/,
+            //     use: ['style-loader', 'css-loader'],
+            // },
+
 ```

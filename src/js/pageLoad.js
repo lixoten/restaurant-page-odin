@@ -43,6 +43,6 @@ function initialLoad() {
     createRestaurantHomePage();
 }
 
-initialLoad();
+// initialLoad();
 
 export default  initialLoad;

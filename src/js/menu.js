@@ -1,3 +1,11 @@
+import item1Image from '../../assets/images/bolinho.jpg';
+import item2Image from '../../assets/images/farofa.jpg';
+import item3Image from '../../assets/images/feijoada.jpeg';
+import item4Image from '../../assets/images/paodequeijo.jpeg';
+import item5Image from '../../assets/images/pastel.jpg';
+import item6Image from '../../assets/images/picanha.jpg';
+import item7Image from '../../assets/images/vatapa.jpg';
+
 const createRestaurantMenuPage = () => {
     const content = document.querySelector("#content");
 
@@ -7,13 +15,13 @@ const createRestaurantMenuPage = () => {
     const menuContainer = document.createElement('div');
     menuContainer.classList.add('menu-container')
 
-    const item1 = menuItem("bolinho.jpg", "Bolinho de Bacalahu", "$3.00 Each");
-    const item2 = menuItem("farofa.jpg", "Farofa Dish", "$12.00");
-    const item3 = menuItem("feijoada.jpeg", "Feijoada Dish", "$3.00 Each");
-    const item4 = menuItem("paodequeijo.jpeg", "Pao de Queijo", "$2.00 Each");
-    const item5 = menuItem("pastel.jpg", "Pastel", "$2.00 Each");
-    const item6 = menuItem("picanha.jpg", "Picanha a la Bob", "$7.00 Each");
-    const item7 = menuItem("vatapa.jpg", "Vatapa mystery Dish", "$0.99");
+    const item1 = menuItem(item1Image, "Bolinho de Bacalahu", "$3.00 Each");
+    const item2 = menuItem(item2Image, "Farofa Dish", "$12.00");
+    const item3 = menuItem(item3Image, "Feijoada Dish", "$3.00 Each");
+    const item4 = menuItem(item4Image, "Pao de Queijo", "$2.00 Each");
+    const item5 = menuItem(item5Image, "Pastel", "$2.00 Each");
+    const item6 = menuItem(item6Image, "Picanha a la Bob", "$7.00 Each");
+    const item7 = menuItem(item7Image, "Vatapa mystery Dish", "$0.99");
 
     menuContainer.appendChild(item1);
     menuContainer.appendChild(item2);
@@ -32,7 +40,7 @@ function menuItem(imgSrc, name, price) {
     menuItem.classList.add('menu-item')
 
     const imgElement = document.createElement('img');
-    imgElement.setAttribute("src", `../assets/images/${imgSrc}`)
+    imgElement.setAttribute("src", imgSrc)
     menuItem.appendChild(imgElement)
 
     const nameElement = document.createElement('p');

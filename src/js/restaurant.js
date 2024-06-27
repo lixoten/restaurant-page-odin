@@ -1,4 +1,4 @@
-
+import storeFrontImage from '../../assets/images/store_front.jpg';
 
 const createRestaurantHomePage = () => {
     const content = document.querySelector("#content");
@@ -11,12 +11,12 @@ const createRestaurantHomePage = () => {
     localContent.classList.add('home-page')
 
     const image = document.createElement('img');
-    image.src = "../assets/images/store_front.jpg";
+    image.src = storeFrontImage;
     image.classList.add("front-image");
     localContent.appendChild(image);
 
     const headline = document.createElement('h1');
-    headline.textContent = "Welcome to a taste of Brasil";
+    headline.textContent = "Welcome to a Taste of Brasil";
     localContent.appendChild(headline);
 
     const oneLiner = document.createElement('p');
