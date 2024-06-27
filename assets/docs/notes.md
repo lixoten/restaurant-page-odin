@@ -56,6 +56,19 @@ note...... if you use "server" no need for "watch". "server" also watches
   }
 }
 ```
+
+`npm install --save-dev gh-pages`
+
+before: "deploy": "gh-pages -d dist",
+after: below, it tries to comment out /dist/ in .gitignore, pust and then uncomment it again. We do not wannt track dist files, but it needs to be removed so deploy can work correctly. there is always the manual way...
+```json
+{
+  "scripts": {
+    "deploy": "sed -i 's|^/dist/|#/dist/|' .gitignore && gh-pages -d dist && sed -i 's|^#/dist/|/dist/|' .gitignore"
+  }
+}
+```
+
 * Things to do 
   * Make sure to remove
     * ---script tag
