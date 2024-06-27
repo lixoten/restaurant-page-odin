@@ -354,7 +354,7 @@ const createRestaurantHomePage = () => {
     localContent.appendChild(image);
 
     const headline = document.createElement('h1');
-    headline.textContent = "Welcome to a sssXXTaste of Brasil";
+    headline.textContent = "XXXWelcome to a sssXXTaste of Brasil";
     localContent.appendChild(headline);
 
     const oneLiner = document.createElement('p');
